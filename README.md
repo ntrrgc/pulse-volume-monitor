@@ -15,6 +15,19 @@ You can use the typical building procedure for CMake projects:
     cmake <path to project>
     make
 
+## Example usage
+
+Execute the command in the terminal and change your system volume using hotkeys, your desktop controls or pavucontrol.
+
+    $ ./pulse_volume_monitor --desired-sink analog
+    57.341%
+    57.9636%
+    57.9636%
+    59.1217%
+    59.8343%
+    60.6354%
+    61.0794%
+
 ## Usage
 
     USAGE: 
