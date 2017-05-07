@@ -7,6 +7,46 @@ At startup, it prints a new line with the current system volume as a percentage.
 
 This is intended to be used in scripts like those for desktop widgets such as [lemonbar](https://github.com/LemonBoy/bar) and [conky](https://github.com/brndnmtthws/conky). This utility provides accurate readings without needing to resort to polling.
 
+## Building
+
+You can use the typical building procedure for CMake projects:
+
+    mkdir build && cd build
+    cmake <path to project>
+    make
+
+## Usage
+
+    USAGE: 
+
+       ./pulse_volume_monitor  [-s <name>] [-j] [-v] [--] [--version] [-h]
+
+
+    Where: 
+
+       -s <name>,  --desired-sink <name>
+         Insert here part of the name of an audio card (as seen in pavucontrol)
+         and it will be selected instead of just picking the first available.
+
+       -j,  --json
+         Use detailed JSON output.
+
+       -v,  --verbose
+         Shows more information than really necessary.
+
+       --,  --ignore_rest
+         Ignores the rest of the labeled arguments following this flag.
+
+       --version
+         Displays version information and exits.
+
+       -h,  --help
+         Displays usage information and exits.
+
+
+       Reports the current volume of a PulseAudio sink, in an asynchronous way
+       (without polling)
+
 ## License
 
 Copyright (c) 2017 Alicia Boya García
